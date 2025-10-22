@@ -21,9 +21,9 @@ limit 5;
 --question 3b.5
 select complaint_type, count(complaint_type) AS number_of_complaints
 from service_requests
-where complaint_type LIKE 'Noise%'
+where agency = 'NYPD'
+AND complaint_type LIKE 'Noise%'
 group by complaint_type 
 order by number_of_complaints desc
-
 
 --testing comment
